@@ -1,0 +1,11 @@
+project_name: 'Minhash'
+dataset_path: 'data/refined/zh.jsonl' 
+export_path: 'data/minhash/zh.jsonl'
+
+np: 50 
+open_tracer: true
+text_keys: text
+
+process:
+  - document_minhash_deduplicator:
+      jaccard_threshold: 0.8
